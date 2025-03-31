@@ -7,6 +7,9 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --custom-color: oklch(0.6 0.2 200);
+  --custom-color-foreground: oklch(1 0 0);
+  
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
