@@ -8,15 +8,15 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50 p-5">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <NotebookPen size={24} className="text-white" />
+          <NotebookPen size={24} fill="#ff8904" className="text-white" />
           <span className="text-2xl text-gray-200">NotesManager</span>
         </div>
 
         <div className="flex gap-3">
-          <Button asChild variant="outline"  >
+          <Button asChild variant="ghost"  >
             <Link to="/login">Login</Link>
           </Button>
-          <Button asChild variant= "outline">
+          <Button asChild variant= "ghost">
             <Link to="/sign-up">Sign Up</Link>
           </Button>
         </div>

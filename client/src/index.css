@@ -7,14 +7,11 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --custom-color: oklch(0.6 0.2 200);
-  --custom-color-foreground: oklch(1 0 0);
-  
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  --custom-color: oklch(0.7 0.1 104);
+  --custom-color-foreground: oklch(1 0 0);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -178,6 +175,8 @@ button:focus-visible {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
+
 
 @layer base {
   * {
