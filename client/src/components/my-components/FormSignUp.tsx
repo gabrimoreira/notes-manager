@@ -51,7 +51,7 @@ function FormSignUp() {
         </div>
 
         <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded duration-200 hover:bg-blue-600 hover:scale-[1.02] transition-all ">
-          Entrar
+          Registrar-se
         </button>
       </form>
     </div>
