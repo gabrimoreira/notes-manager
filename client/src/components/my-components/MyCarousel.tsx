@@ -6,6 +6,7 @@ import { Rabbit } from "lucide-react";
 import { Rocket } from "lucide-react";
 import { ClipboardList } from "lucide-react";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 import {
   Carousel,
   CarouselContent,
@@ -69,17 +70,18 @@ function MyCarousel() {
         </CarouselContent>
       </Carousel>
 
-      <div
-        role="button"
-        className="flex bg-gray-950 px-4 py-2 rounded-lg items-center justify-around w-[400px] cursor-pointer 
+      <Link to={"https://github.com/gabrimoreira/notes-manager"} target="_blank">
+        <div
+          role="button"
+          className="flex bg-gray-950 px-4 py-2 rounded-lg items-center justify-around w-[400px] cursor-pointer 
     hover:outline-2 hover:outline-orange-500 hover:bg-gray-900  transition-all duration-100"
-      >
-        <span className="text-gray-200 text-xl hover:text-white">
-          
-          Conheça o Repositório do Projeto
-        </span>
-        <FaGithub size={24} fill="#ff8904" />
-      </div>
+        >
+          <span className="text-gray-200 text-xl hover:text-white">
+            Conheça o Repositório do Projeto
+          </span>
+          <FaGithub size={24} fill="#ff8904" />
+        </div>
+      </Link>
     </div>
   );
 }

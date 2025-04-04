@@ -9,14 +9,18 @@ function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <NotebookPen size={24} fill="#ff8904" className="text-white" />
-          <span className="text-2xl text-gray-200">NotesManager</span>
+
+          <Link to="/">
+            {" "}
+            <span className="text-2xl text-gray-200">NotesManager</span>
+          </Link>
         </div>
 
         <div className="flex gap-3">
-          <Button asChild variant="ghost"  >
+          <Button asChild variant="ghost">
             <Link to="/login">Login</Link>
           </Button>
-          <Button asChild variant= "ghost">
+          <Button asChild variant="ghost">
             <Link to="/sign-up">Sign Up</Link>
           </Button>
         </div>
