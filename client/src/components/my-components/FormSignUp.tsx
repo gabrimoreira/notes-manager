@@ -2,11 +2,12 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type FormInputs = {
+  fullName: string;
   email: string;
   password: string;
 };
 
-function FormLogin() {
+function FormSignUp() {
   const {
     register,
     handleSubmit,
@@ -20,7 +21,14 @@ function FormLogin() {
   return (
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-6 rounded-lg shadow-md w-96">
-
+        <div className="mb-4">
+          <label className="block text-gray-700">Nome Completo</label>
+          <input
+            {...register("fullName", { required: "Nome completo é obrigatório" })}
+            className="w-full p-2 border border-gray-300 rounded-xl mt-1 autofill:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.fullName && <span className="text-red-500 text-sm">{errors.fullName.message}</span>}
+        </div>
 
         <div className="mb-4">
           <label className="block text-gray-700">Email</label>
@@ -50,4 +58,4 @@ function FormLogin() {
   );
 }
 
-export default FormLogin;
+export default FormSignUp;
