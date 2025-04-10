@@ -13,8 +13,25 @@ function FormLogin() {
     formState: { errors },
   } = useForm<FormInputs>();
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+    try {
+      const res= await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (!res.ok) {
+        throw new Error("Erro ao fazer login");
+      }
+  
+      const result = await res.json();
+      console.log("Resposta do servidor:", result);
+    } catch (error) {
+      console.error("Erro:", error);
+    }
   };
 
   return (
