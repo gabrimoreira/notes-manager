@@ -1,10 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/my-components/Navbar"
-
-function Layout() {
+import NavbarUser from "@/components/my-components/NavbarUser";
+ function LayoutUser() {
   return (
     <div>
-      <Navbar />
+      <NavbarUser />
       <main className="bg-gray-900 h-screen w-screen"> 
         <Outlet />
       </main>
@@ -12,4 +11,5 @@ function Layout() {
   );
 }
 
-export default Layout;
+
+export default LayoutUser;
